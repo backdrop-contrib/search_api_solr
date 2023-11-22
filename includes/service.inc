@@ -2595,9 +2595,8 @@ class SearchApiSolrService extends SearchApiAbstractService {
    * @return string
    *   The name of a class which implements SearchApiSolrConnectionInterface.
    */
-  public function getConnectionClass() {
-      config_set('search_api_solr.settings', 'search_api_solr_connection_class', $this->connection_class);
-    return $this->connection_class;
+  public function get() {
+    return config_get('search_api_solr.settings', 'search_api_solr_connection_class');
   }
 
   /**
